@@ -1,0 +1,205 @@
+.md-container {
+    background: #e74c3c;
+    min-height: 100%;
+}
+
+.md-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    max-width: 630px;
+    min-width: 320px;
+    height: auto;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    z-index: 1999;
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.md-show {
+    visibility: visible;
+}
+
+.md-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1998;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.md-show ~ .md-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Content styles */
+
+.md-content {
+    color: rgba(3, 126, 243, 1);
+    background: #F2F2F2;
+    position: relative;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+.md-content h3 {
+    margin: 0;
+    padding: 0.4em;
+    text-align: center;
+    font-size: 2.4em;
+    font-weight: 300;
+    opacity: 0.8;
+    /* background: rgba(0,0,0,0.1); */
+    border-radius: 3px 3px 0 0;
+    width: 85%;
+    margin: 0 auto;
+    border-bottom: 1px solid;
+}
+
+.md-content > div {
+    padding: 15px 40px 30px;
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.15em;
+}
+
+div.md-action {
+    position: relative;
+    height: 80px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.md-content > div p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.md-content > div ul {
+    margin: 0;
+    padding: 0 0 30px 20px;
+}
+
+#plane ul {
+    list-style: none;
+}
+
+#plane li i {
+    margin-right: 10px;
+    transform: rotateZ(180deg);
+}
+
+.md-content > div ul li {
+    padding: 5px 0;
+}
+
+.md-content button {
+    display: block;
+    margin: 0 auto;
+    font-size: 0.8em;
+}
+
+.md-effect-1 .md-content {
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.md-show.md-effect-1 .md-content {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+@media screen and (max-width: 50em) {
+    body {
+        font-size: 75%;
+    }
+    .md-modal,
+    .md-content {
+        width: 100%;
+        height: 100%;
+    }
+    .md-content {
+        position: absolute;
+        top: 0%;
+        width: 106%;
+        overflow-y: scroll;
+    }
+    .md-action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .md-content > div p {
+        line-height: 1.5;
+        text-align: center;
+        font-size: 20px;
+        padding: 3%;
+    }
+    .md-modal.md-show {
+        opacity: 1;
+        transform-origin: -75% -100%;
+    }
+}
+
+@media screen and (max-width: 50em) and (orientation: portrait) {
+    .md-content {
+        padding-top: 20%;
+        left: -1%;
+    }
+    .md-action a {
+        min-width: 80%;
+        margin-top: 10%;
+        margin-left: 10%;
+        font-size: 23px;
+    }
+    a.btn.action-right {
+        right: 10% !important;
+        top: 0%;
+    }
+    a.btn.action-left {
+        left: 0%;
+        top: 100%;
+    }
+}
+
+@media screen and (max-width: 50em) and (orientation: landscape) {
+    .md-content {
+        width: 117%;
+        left: -8%;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    .md-content {
+        left: -12%;
+        width: 123%;
+        padding-top: 40%;
+    }
+}

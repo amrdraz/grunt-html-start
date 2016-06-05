@@ -1,0 +1,79 @@
+html {
+    font-family: Lato;
+    counter-reset: item;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    /* uncomment to get smooth momentum scroll, but also a rubber band effect */
+    -webkit-overflow-scrolling: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.super-btn {
+    font-size: 3em;
+    background: none;
+    border: none;
+    position: absolute;
+    outline: none;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+}
+
+
+.md-modal a,
+.md-modal a:hover,
+,
+.md-modal a:visited {
+    color: #037EF3;
+}
+
+a.btn,
+a.btn:visited {
+    border: 1px solid #58A7F2;
+    color: #58A7F2;
+    padding: 5px 10px;
+    transition: all 0.3s;
+}
+
+.btn {
+    line-height: 2;
+}
+
+.action-left {
+    position: absolute;
+    left: 0;
+}
+
+a.btn.action-right {
+    position: absolute;
+    right: 0;
+}
+
+a.btn:hover {
+    color: white;
+    background-color: #58a7f2;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: white;
+    text-decoration: none;
+}
